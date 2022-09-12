@@ -37,7 +37,7 @@ export default function App() {
         width={isLucky ? width : 0}
       />
       <div className="container">
-        <h1>Is Your Birthday Lucky? 🤔</h1>
+        <h1 className="heading">Is Your Birthday Lucky? 🤔</h1>
         <label for="dob">Date Of Birth:</label>
         <input
           id="dob"
@@ -58,7 +58,7 @@ export default function App() {
           }}
         />
         <button onClick={checkResult}>Check Result</button>
-        <div className="result">{result}</div>
+        <h2 className="result">{result}</h2>
       </div>
     </div>
   );

@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap");
+:root {
+  --primary-color: #ebd3f7;
+  --secondary-color: #e3c0f5;
+  --tertiary-color: #bb6ae3;
+  --shadow-color: #cb87ed;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--primary-color);
+  overflow-x: hidden;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.App {
+  margin: 0 auto;
+  padding: 1rem;
+  margin-top: 2rem;
+  width: 80%;
+  max-width: 450px;
+  min-width: 300px;
+  background-color: var(--secondary-color);
+  border-radius: 0.3rem;
+  text-align: center;
+  box-shadow: 0px 0px 2px var(--shadow-color);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heading {
+  font-size: 1.8rem;
+  letter-spacing: 0.05rem;
+}
+input {
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  margin: 0.8rem 0rem;
+  width: 80%;
+  font-size: 1.1rem;
+  outline: none;
+  border: none;
+  font-family: "Source Sans Pro", sans-serif;
+}
+button {
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.3rem;
+  background-color: var(--tertiary-color);
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin: 0.8rem 0rem;
+  border: none;
+}
+button:hover {
+  background-color: var(--shadow-color);
+}
+label {
+  margin: 0.5rem 0rem;
+  font-size: 1.2rem;
+}
+.result {
+  padding: 0.4rem;
+  font-size: 1.3rem;
+}
