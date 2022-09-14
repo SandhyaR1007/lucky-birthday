@@ -5,6 +5,9 @@
   --tertiary-color: #bb6ae3;
   --shadow-color: #cb87ed;
 }
+* {
+  box-sizing: border-box;
+}
 
 body {
   padding: 0;
