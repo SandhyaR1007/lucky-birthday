@@ -11,20 +11,26 @@ export default function App() {
 
   const checkResult = () => {
     if (date !== "" && number !== "") {
-      let sum = date.split("-").reduce((a, b) => parseInt(a) + parseInt(b));
+      let sum = 0;
+      let userInput = date.replaceAll("-", "");
+      for (let val of userInput) {
+        sum += Number(val);
+      }
       let rem = sum % number;
       if (rem === 0) {
         setIsLucky(true);
 
-        setResult("Congrats, you have a lucky birthday");
+        setResult("Congrats, you have a lucky birthday 🎉");
         setTimeout(() => {
           setIsLucky(false);
         }, 3000);
       } else {
-        setResult(`${number} is not that Lucky..`);
+        setResult(`${number} is not that Lucky.. 😿`);
       }
-    } else {
-      setResult("Please enter both fields");
+    } else if (date == "") {
+      setResult("Please enter date");
+    } else if (number == "") {
+      setResult("Please enter a number");
     }
   };
   return (
@@ -38,7 +44,7 @@ export default function App() {
       />
       <div className="container">
         <h1 className="heading">Is Your Birthday Lucky? 🤔</h1>
-        <label for="dob">Date Of Birth:</label>
+        <label htmlFor="dob">Date Of Birth:</label>
         <input
           id="dob"
           type="date"
@@ -47,7 +53,7 @@ export default function App() {
             setDate(e.target.value);
           }}
         />
-        <label for="lucky-number">Lucky Number:</label>
+        <label htmlFor="lucky-number">Lucky Number:</label>
         <input
           id="lucky-number"
           type="number"
